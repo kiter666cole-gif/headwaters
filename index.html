@@ -22,8 +22,9 @@
      Replace https://calendly.com/YOUR_LINK (appears 3 times)
      with your real Calendly / scheduling link.
 
-  Also search for "hello@headwatersfit.com" and swap in your real
-  business email address.
+  Email is live: cole@headwatersfit.com forwards to Gmail via
+  Cloudflare Email Routing (receive-only — replies go out from Gmail
+  until an outbound sending path is set up).
   ============================================================
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -687,7 +688,7 @@
   <div class="wrap foot-row">
     <p class="foot-logo">Headwaters <span>Health &amp; Fitness</span></p>
     <p>Butte County, California &middot; and online, everywhere</p>
-    <p><a href="mailto:hello@headwatersfit.com">hello@headwatersfit.com</a> &middot; &copy; <span id="yr"></span> Headwaters Health &amp; Fitness</p>
+    <p><a href="mailto:cole@headwatersfit.com">cole@headwatersfit.com</a> &middot; &copy; <span id="yr"></span> Headwaters Health &amp; Fitness</p>
   </div>
 </footer>
 
@@ -713,7 +714,7 @@
       if (form.action.includes('YOUR_FORM_ID')) {
         msg.textContent = '';
         msg.className = 'form-msg err';
-        msg.innerHTML = 'The form isn’t connected yet — email me directly at <a href="mailto:hello@headwatersfit.com">hello@headwatersfit.com</a> and I’ll reply personally.';
+        msg.innerHTML = 'The form isn’t connected yet — email me directly at <a href="mailto:cole@headwatersfit.com">cole@headwatersfit.com</a> and I’ll reply personally.';
         return;
       }
 
@@ -731,7 +732,7 @@
         msg.textContent = 'Got it — check your inbox. I read every message and reply personally, usually within a day.';
       } catch {
         msg.className = 'form-msg err';
-        msg.innerHTML = 'Something went wrong — email me directly at <a href="mailto:hello@headwatersfit.com">hello@headwatersfit.com</a>.';
+        msg.innerHTML = 'Something went wrong — email me directly at <a href="mailto:cole@headwatersfit.com">cole@headwatersfit.com</a>.';
       } finally {
         btn.textContent = original; btn.disabled = false;
       }
