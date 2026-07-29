@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" viewBox="0 0 640 200" fill="none" role="img" aria-label="Headwaters Health and Fitness">
+  <!--
+    Headwaters Health & Fitness — Trail-Sign Lockup (dark backgrounds)
+    Colors: bone #F5F0E6 · light clay #E8965F
+  -->
+  <defs><clipPath id="iconClipD"><circle cx="90" cy="100" r="63"/></clipPath></defs>
+  <g>
+    <circle cx="90" cy="100" r="74" stroke="#F5F0E6" stroke-width="3"/>
+    <circle cx="90" cy="100" r="65" stroke="#F5F0E6" stroke-width="1"/>
+    <g clip-path="url(#iconClipD)">
+      <circle cx="90" cy="76" r="17" fill="#E8965F"/>
+      <path d="M 22 122 L 58 88 L 80 108 L 112 76 L 140 106 L 158 122 Z" fill="#F5F0E6" opacity=".38"/>
+      <path d="M 16 138 L 60 106 L 86 128 L 122 96 L 152 126 L 168 138 Z" fill="#F5F0E6"/>
+      <path d="M 40 152 q 18 -5 37 0 t 37 0 37 0" stroke="#F5F0E6" stroke-width="1.4" fill="none" opacity=".55"/>
+    </g>
+  </g>
+  <text x="196" y="92" font-family="Fraunces, Georgia, serif" font-size="54" font-weight="550" fill="#F5F0E6">Headwaters</text>
+  <line x1="199" y1="112" x2="576" y2="112" stroke="#E8965F" stroke-width="2.5"/>
+  <text x="199" y="140" font-family="'Albert Sans', Arial, sans-serif" font-size="20.5" font-weight="800" letter-spacing="7.4" fill="#E8965F">HEALTH &amp; FITNESS</text>
+  <text x="199" y="165" font-family="'Albert Sans', Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="3.4" fill="#F5F0E6" opacity=".62">BUTTE COUNTY &#183; CALIFORNIA</text>
+</svg>

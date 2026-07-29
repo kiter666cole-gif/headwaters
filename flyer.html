@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Headwaters Health &amp; Fitness — Print Flyer</title>
+<!--
+  ============================================================
+  PRINT FLYER — US Letter (8.5 x 11), one page.
+
+  TO PRINT:  open in Chrome -> Ctrl+P
+             Paper: Letter | Margins: None/Default | Scale: 100%
+             "Background graphics" = ON  (needed for the accent colors)
+
+  TONER NOTES: the page background is pure white by design — no
+  full-bleed fills anywhere. All color is hairline strokes, thin
+  rules, and small text accents. Prints fine in grayscale too.
+
+  BEFORE PRINTING, REPLACE:
+    - headwatersfit.com   (your domain)
+    - hello@headwatersfit.com           (your email)
+    - (530) 000-0000                  (your phone)
+    - the dashed QR box               (drop in a QR image)
+  ============================================================
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C2419;
+    --pine:#2A3A2E;
+    --fern:#4C7256; /* visible green for accents — #2A3A2E reads as black at small sizes */
+    --clay:#C4551A;
+    --mute:#5C6657;
+    --rule:#D8D2C4;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Albert Sans",-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+
+  /* ---------- screen preview shell (never prints) ---------- */
+  body{
+    background:#E7E3DA;
+    font-family:var(--sans);
+    display:flex;flex-direction:column;align-items:center;
+    padding:28px 16px 60px;gap:18px;
+  }
+  .toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center}
+  .toolbar p{font-size:13px;color:#6B6659;max-width:60ch;text-align:center}
+  .printbtn{
+    font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    background:var(--clay);color:#fff;border:none;border-radius:4px;padding:13px 26px;cursor:pointer;
+    box-shadow:0 3px 0 #A84611;
+  }
+  .printbtn:active{transform:translateY(2px);box-shadow:0 1px 0 #A84611}
+
+  /* ---------- the sheet ---------- */
+  .sheet{
+    width:8.5in;height:11in;background:#fff;position:relative;overflow:hidden;
+    padding:0.4in 0.55in 0.38in;
+    display:flex;flex-direction:column;
+    box-shadow:0 10px 40px -12px rgba(0,0,0,.35);
+    color:var(--ink);
+  }
+
+  /* hairline topo decoration — strokes only, almost no toner */
+  .topo{position:absolute;pointer-events:none}
+
+  h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  .it{font-style:italic}
+
+  /* ---------- masthead ---------- */
+  .mast{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:9pt;border-bottom:1.5px solid var(--ink)}
+  .mast-l{display:flex;align-items:center;gap:9pt}
+  .mast-icon{flex:none;display:block}
+  .brand{font-family:var(--serif);font-size:22pt;font-weight:600;line-height:1}
+  .brand span{display:block;font-family:var(--sans);font-size:8.2pt;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);margin-top:3.5pt}
+  .mast-r{text-align:right;font-size:8.8pt;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);line-height:1.5}
+
+  /* ---------- hero ---------- */
+  .hero{padding:12pt 0 0;position:relative;z-index:1}
+  /* 52pt = largest that stays on ONE line in both Fraunces and the Georgia fallback */
+  .hero h1{font-size:52pt;font-weight:370;letter-spacing:-.02em}
+  .hero h1 .it{color:var(--clay);font-weight:400}
+  .lede{font-size:12.8pt;line-height:1.44;color:var(--pine);max-width:38em;margin-top:10pt}
+  .lede b{font-weight:700;color:var(--ink)}
+
+  /* ---------- section label ---------- */
+  /* two-tone: fern label text, clay dash */
+  .lbl{
+    font-size:8.6pt;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--fern);
+    display:flex;align-items:center;gap:8pt;
+  }
+  .lbl::before{content:"";width:24pt;height:1.5px;background:var(--clay)}
+
+  /* ---------- pains ---------- */
+  .pain-wrap{margin-top:10pt}
+  /* bullets stack single-column so the repeated "You've tried the..." reads as a drumbeat */
+  .pains{display:grid;grid-template-columns:1fr;gap:7pt;margin-top:8pt}
+  .pain{display:flex;gap:10pt;align-items:center;font-size:15pt;line-height:1.25;color:var(--ink)}
+  /* the pivot question, then its answer set smaller beneath */
+  .pain-q{font-family:var(--serif);font-size:20.5pt;font-weight:430;line-height:1.2;margin-top:10pt;color:var(--ink)}
+  .pain-q .it{color:var(--clay)}
+  .pain-a{font-size:10pt;line-height:1.4;color:var(--mute);margin-top:6pt;max-width:52em}
+  /* two-tone: fern ring, clay check — scaled up for the larger bullet text */
+  .pain i{
+    flex:none;width:14.5pt;height:14.5pt;border:1.7px solid var(--fern);border-radius:50%;
+    display:block;position:relative;
+  }
+  .pain i::after{
+    content:"";position:absolute;inset:3.6pt;border-left:1.6px solid var(--clay);border-top:1.6px solid var(--clay);
+    transform:rotate(-135deg);
+  }
+
+  /* ---------- guarantee — the closer, sits at the foot of the page ---------- */
+  .guar{
+    margin-top:auto;border-top:1.6px solid var(--clay);
+    padding-top:12pt;display:flex;align-items:center;gap:16pt;position:relative;
+  }
+  .guar-badge{
+    flex:none;width:70pt;height:70pt;border:1.4px solid var(--clay);border-radius:50%;
+    display:grid;place-items:center;
+  }
+  .guar-badge svg{display:block;width:34px;height:34px}
+  /* green headline larger, orange promise beneath it */
+  .guar h2{font-size:25pt;font-weight:400;line-height:1.08;color:var(--fern)}
+  /* .guar .guar-sub — must outrank the generic ".guar p" rule below it */
+  .guar .guar-sub{font-family:var(--serif);font-style:italic;font-size:19pt;font-weight:430;line-height:1.15;color:var(--clay);margin-top:2pt;max-width:none}
+  .guar p{font-size:10pt;line-height:1.38;color:var(--pine);margin-top:6pt;max-width:46em}
+  .guar p b{color:var(--ink);font-weight:700}
+
+  /* ---------- what you get ---------- */
+  .get{margin-top:10pt}
+  .get-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15pt;margin-top:8pt}
+  .get-col{border-top:2px solid var(--fern);padding-top:8pt}
+  .get-col .n{font-family:var(--serif);font-style:italic;font-size:9.8pt;color:var(--clay);letter-spacing:.04em}
+  /* min-height = 2 lines, so all three body paragraphs start on the same baseline */
+  .get-col h3{font-size:15pt;font-weight:480;margin:5pt 0 6pt;line-height:1.15;min-height:2.3em}
+  .get-col p{font-size:10pt;line-height:1.4;color:var(--mute)}
+
+  /* ---------- coach ---------- */
+  .coach{
+    margin-top:11pt;border-top:1.2px solid var(--rule);padding-top:10pt;
+    display:flex;align-items:center;gap:14pt;
+  }
+  .headshot{
+    flex:none;width:64pt;height:64pt;border-radius:50%;overflow:hidden;position:relative;
+    border:1.5px solid var(--fern);display:grid;place-items:center;text-align:center;
+    font-size:6.6pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:#A9A296;line-height:1.5;
+  }
+  /* Cole.jpeg is a group shot — zoom + pan so only his face fills the circle.
+     If you swap in a different photo, reset to: width:100%;left:0;top:0;object-fit:cover */
+  .headshot img{position:absolute;width:275%;max-width:none;left:-84%;top:-10%;display:block}
+  .coach p{font-family:var(--serif);font-size:14pt;font-weight:400;line-height:1.3;color:var(--ink)}
+  .coach p .it{color:var(--clay)}
+
+  /* ---------- CTA + contact footer ---------- */
+  .cta{margin-top:10pt;border-top:1.2px solid var(--rule);padding-top:9pt}
+  .cta-line{font-family:var(--serif);font-size:16pt;font-weight:440;line-height:1.2;color:var(--ink)}
+  .cta-line .it{color:var(--clay)}
+  .contact{
+    margin-top:7pt;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:5pt 20pt;
+  }
+  .contact span{font-size:11.4pt;font-weight:700;color:var(--ink);letter-spacing:.01em}
+  .contact span.site{color:var(--clay)}
+
+  /* ---------- print ---------- */
+  @page{size:Letter;margin:0}
+  @media print{
+    body{background:#fff;padding:0;display:block}
+    .toolbar{display:none !important}
+    /* 10.96in (not a flat 11) so sub-pixel rounding can never tip a blank page 2 */
+    .sheet{
+      box-shadow:none;width:100%;height:10.96in;
+      -webkit-print-color-adjust:exact;print-color-adjust:exact;
+      page-break-after:avoid;break-after:avoid;
+    }
+    html,body{height:auto}
+  }
+  /* SCREEN ONLY. Must stay "screen and" — a bare (max-width:900px) also matches
+     PRINT (Letter is 816px wide at 96dpi) and would shrink the printout to 62%. */
+  @media screen and (max-width:900px){
+    .sheet{transform:scale(.62);transform-origin:top center;margin-bottom:-4.2in}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button class="printbtn" onclick="window.print()">Print this flyer</button>
+  <p>Chrome &rarr; Ctrl+P &rarr; Paper: <b>Letter</b> &middot; Margins: <b>None</b> &middot; Scale: <b>100%</b> &middot; Background graphics: <b>On</b></p>
+</div>
+
+<div class="sheet">
+
+  <!-- hairline topo, top-right. strokes only = negligible toner -->
+  <svg class="topo" style="top:-1.15in;right:-1.5in;width:5.1in;height:5.1in" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+    <g stroke="#C4551A" stroke-opacity=".22" stroke-width="1.1">
+      <path d="M80 300c0-120 100-220 220-220s220 100 220 220-100 220-220 220S80 420 80 300Z"/>
+      <path d="M124 300c0-96 80-176 176-176s176 80 176 176-80 176-176 176-176-80-176-176Z"/>
+      <path d="M168 303c0-74 60-138 134-138s134 60 134 134-60 138-134 138-134-60-134-134Z"/>
+      <path d="M212 306c0-52 40-96 92-96s90 40 90 92-38 98-90 98-92-42-92-94Z"/>
+      <path d="M256 308c0-30 20-54 48-54s46 20 46 48-18 56-46 56-48-20-48-50Z"/>
+    </g>
+  </svg>
+  <!-- hairline ridge lines, bottom-left -->
+  <svg class="topo" style="bottom:1.05in;left:-1.1in;width:3.5in;height:1.5in" viewBox="0 0 400 170" fill="none" aria-hidden="true">
+    <g stroke="#4C7256" stroke-opacity=".35" stroke-width="1.1">
+      <path d="M-20 150c70-46 120-8 190-52s130-24 240-72"/>
+      <path d="M-20 128c66-44 112-6 182-50s126-22 238-70"/>
+      <path d="M-20 106c62-42 104-4 174-48s122-20 236-68"/>
+      <path d="M-20 84c58-40 96-2 166-46s118-18 234-66"/>
+    </g>
+  </svg>
+
+  <!-- ===== masthead ===== -->
+  <div class="mast">
+    <div class="mast-l">
+      <svg class="mast-icon" width="46" height="46" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+        <defs><clipPath id="mastIconClip"><circle cx="100" cy="100" r="86"/></clipPath></defs>
+        <circle cx="100" cy="100" r="96" stroke="var(--pine)" stroke-width="5"/>
+        <g clip-path="url(#mastIconClip)">
+          <circle cx="100" cy="68" r="23" fill="var(--clay)"/>
+          <path d="M 8 130 L 57 84 L 87 111 L 130 68 L 168 109 L 192 130 Z" fill="var(--fern)" opacity=".55"/>
+          <path d="M 0 152 L 60 108 L 95 138 L 144 95 L 185 136 L 206 152 Z" fill="var(--fern)"/>
+          <path d="M 32 171 q 24 -7 50 0 t 50 0 50 0" stroke="var(--fern)" stroke-width="2.5" fill="none" opacity=".7"/>
+        </g>
+      </svg>
+      <div class="brand">Headwaters<span>Health &amp; Fitness</span></div>
+    </div>
+    <div class="mast-r">1:1 Coaching<br>Butte County &middot; &amp; Online</div>
+  </div>
+
+  <!-- ===== hero ===== -->
+  <div class="hero">
+    <h1>Get the most out of <span class="it">life.</span></h1>
+    <p class="lede">1 on 1 coaching for people looking for <b>a better quality of life</b> through optimizing their health and fitness.</p>
+  </div>
+
+  <!-- ===== pains ===== -->
+  <div class="pain-wrap">
+    <p class="lbl">The real problem</p>
+    <div class="pains">
+      <div class="pain"><i></i><span>You&rsquo;ve tried the diets.</span></div>
+      <div class="pain"><i></i><span>You&rsquo;ve tried the exercise programs.</span></div>
+    </div>
+    <p class="pain-q">So why didn&rsquo;t it <span class="it">stick?</span></p>
+    <p class="pain-a">Lack of discipline, lack of knowledge, or lack of results — something always gets in your way, and starting over gets harder every time.</p>
+  </div>
+
+  <!-- ===== what you get ===== -->
+  <div class="get">
+    <p class="lbl">What you actually get</p>
+    <div class="get-grid">
+      <div class="get-col">
+        <p class="n">No. 01</p>
+        <h3>Training plan built for you</h3>
+        <p>Designed around your body, your goals, and your lifestyle — with coaching on executing simple, accomplishable tasks. Not a cookie cutter plan.</p>
+      </div>
+      <div class="get-col">
+        <p class="n">No. 02</p>
+        <h3>Nutrition plan that fuels your life</h3>
+        <p>No calorie counting. No starvation diets. We eat to fuel the life you&rsquo;re living — maintaining your ideal body shape and weight becomes effortless.</p>
+      </div>
+      <div class="get-col">
+        <p class="n">No. 03</p>
+        <h3>Weekly 1:1 coaching</h3>
+        <p>Real accountability, troubleshooting, and support from a real human who can adapt and make changes as you progress.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== coach ===== -->
+  <div class="coach">
+    <div class="headshot"><img src="Cole.jpeg" alt="Cole Henderson"></div>
+    <p>I&rsquo;m Cole Henderson — an active dad of three with a passion for health, fitness and training. <span class="it">I don&rsquo;t just teach this. I live it, and I love sharing this way of living with others.</span></p>
+  </div>
+
+  <!-- ===== guarantee — the closer ===== -->
+  <div class="guar">
+    <div class="guar-badge">
+      <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" stroke="#4C7256" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="m8.5 12 2.5 2.5 4.5-5" stroke="#C4551A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div>
+      <h2>One month completely risk free.</h2>
+      <p class="guar-sub">No results, you don&rsquo;t pay.</p>
+      <p>No conditions, no fine print, no case to argue. <b>You</b> decide whether it worked. If it didn&rsquo;t, you don&rsquo;t pay and we part ways — no hard feelings. I&rsquo;m confident I can get you results, so I&rsquo;ll prove it before you ever pay for it.</p>
+    </div>
+  </div>
+
+  <!-- ===== contact footer ===== -->
+  <div class="cta">
+    <p class="cta-line">Book your free call — <span class="it">no pressure, no obligation.</span></p>
+    <div class="contact">
+      <span class="site">headwatersfit.com</span>
+      <span>(530) 000-0000</span>
+      <span>hello@headwatersfit.com</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

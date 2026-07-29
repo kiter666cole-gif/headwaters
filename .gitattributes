@@ -1,0 +1,4 @@
+CNAME text eol=lf
+*.html text
+*.svg text
+*.jpeg binary

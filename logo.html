@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HHF — Logo Concepts</title>
+<!--
+  Headwaters Health & Fitness — logo concept sheet (NorCal badge style)
+  Three variants, each shown on light + dark, plus a small-size test row.
+  These are hand-built inline SVGs using the brand palette + fonts.
+  NOTE: before putting a final pick on merch/print, text should be
+  converted to outlines so it renders without the webfont.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Albert+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F0E6; --ink:#1C2419; --pine:#2A3A2E; --pine-deep:#202D24;
+    --clay:#C4551A; --clay-lt:#E8965F; --mute:#5C6657; --rule:#D8D2C4;
+    --serif:"Fraunces",Georgia,serif; --sans:"Albert Sans",-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#E7E3DA;font-family:var(--sans);color:var(--ink);padding:40px 20px 80px}
+  .wrap{max-width:1080px;margin:0 auto}
+  h1{font-family:var(--serif);font-weight:400;font-size:34px;letter-spacing:-.01em}
+  .sub{color:#6B6659;font-size:14px;margin-top:8px;max-width:70ch}
+  h2{font-family:var(--serif);font-weight:450;font-size:22px;margin:48px 0 6px}
+  .note{font-size:13px;color:#6B6659;margin-bottom:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card{border-radius:10px;display:flex;align-items:center;justify-content:center;padding:34px;min-height:340px}
+  .card.light{background:var(--paper);border:1px solid var(--rule)}
+  .card.dark{background:var(--pine-deep)}
+  .card svg{max-width:100%;height:auto}
+  /* palette hooks the SVGs reference */
+  .light{--lg-ink:#2A3A2E;--lg-accent:#C4551A;--lg-soft:rgba(42,58,46,.16)}
+  .dark{--lg-ink:#F5F0E6;--lg-accent:#E8965F;--lg-soft:rgba(245,240,230,.2)}
+  .small-row{display:flex;align-items:center;gap:36px;flex-wrap:wrap;background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:26px 30px;margin-top:18px}
+  .small-row span{font-size:11px;color:#8B8577;letter-spacing:.1em;text-transform:uppercase}
+  @media(max-width:820px){.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>HHF — logo concepts <span style="color:var(--clay)">·</span> NorCal badge style</h1>
+  <p class="sub">Three directions, each shown on bone and pine. Same palette and type as the site and flyer, so whichever you pick drops straight into the masthead.</p>
+
+  <!-- ================= VARIANT A — RANGER BADGE ================= -->
+  <h2>A — The Ranger Badge</h2>
+  <p class="note">Full national-park-patch treatment: sun, foothill ridgelines, pines, topo water lines, arched name. The "hero" mark for stickers, shirts, social avatar.</p>
+  <div class="row">
+    <div class="card light">
+      <svg width="330" height="330" viewBox="0 0 400 400" fill="none" aria-label="HHF ranger badge logo">
+        <defs>
+          <clipPath id="sceneClipA1"><circle cx="200" cy="200" r="147"/></clipPath>
+          <path id="arcTopA1" d="M 38 200 A 162 162 0 0 1 362 200"/>
+          <path id="arcBotA1" d="M 44 200 A 156 156 0 0 0 356 200"/>
+        </defs>
+        <!-- rings -->
+        <circle cx="200" cy="200" r="192" stroke="var(--lg-ink)" stroke-width="3"/>
+        <circle cx="200" cy="200" r="184" stroke="var(--lg-ink)" stroke-width="1.2"/>
+        <circle cx="200" cy="200" r="150" stroke="var(--lg-ink)" stroke-width="2.5"/>
+        <!-- arched text -->
+        <text font-family="var(--serif)" font-size="34" font-weight="600" letter-spacing="7" fill="var(--lg-ink)">
+          <textPath href="#arcTopA1" startOffset="50%" text-anchor="middle">HEADWATERS</textPath>
+        </text>
+        <text font-family="var(--sans)" font-size="19" font-weight="800" letter-spacing="5" fill="var(--lg-accent)">
+          <textPath href="#arcBotA1" startOffset="50%" text-anchor="middle">HEALTH &amp; FITNESS</textPath>
+        </text>
+        <!-- side diamonds -->
+        <path d="M 26 200 l 7 -7 7 7 -7 7 Z" fill="var(--lg-accent)"/>
+        <path d="M 360 200 l 7 -7 7 7 -7 7 Z" fill="var(--lg-accent)"/>
+        <!-- scene -->
+        <g clip-path="url(#sceneClipA1)">
+          <!-- sun + rays -->
+          <circle cx="200" cy="138" r="26" fill="var(--lg-accent)"/>
+          <g stroke="var(--lg-accent)" stroke-width="3" stroke-linecap="round">
+            <line x1="200" y1="96" x2="200" y2="82"/>
+            <line x1="245" y1="115" x2="256" y2="105"/>
+            <line x1="155" y1="115" x2="144" y2="105"/>
+            <line x1="262" y1="152" x2="277" y2="149"/>
+            <line x1="138" y1="152" x2="123" y2="149"/>
+          </g>
+          <!-- back ridge -->
+          <path d="M 40 232 L 106 168 L 146 206 L 204 146 L 258 202 L 302 170 L 360 232 Z" fill="var(--lg-ink)" opacity=".38"/>
+          <!-- front ridge -->
+          <path d="M 30 252 L 112 196 L 160 238 L 226 178 L 288 240 L 340 210 L 372 252 Z" fill="var(--lg-ink)"/>
+          <!-- pines -->
+          <g fill="var(--lg-ink)">
+            <path d="M 84 250 l 13 -22 13 22 h -8 l 9 15 h -28 l 9 -15 Z"/>
+            <path d="M 296 252 l 11 -19 11 19 h -7 l 8 13 h -24 l 8 -13 Z"/>
+          </g>
+          <!-- monogram + locale -->
+          <text x="200" y="299" text-anchor="middle" font-family="var(--serif)" font-size="42" font-weight="550" letter-spacing="3" fill="var(--lg-ink)">HHF</text>
+          <text x="200" y="318" text-anchor="middle" font-family="var(--sans)" font-size="11.5" font-weight="700" letter-spacing="3.4" fill="var(--lg-accent)">BUTTE COUNTY · CA</text>
+          <!-- topo water lines -->
+          <g stroke="var(--lg-ink)" stroke-width="1.4" opacity=".5">
+            <path d="M 62 334 q 34 -8 69 0 t 69 0 69 0"/>
+            <path d="M 84 344 q 29 -7 58 0 t 58 0 58 0"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="card dark">
+      <svg width="330" height="330" viewBox="0 0 400 400" fill="none" aria-label="HHF ranger badge logo dark">
+        <defs>
+          <clipPath id="sceneClipA2"><circle cx="200" cy="200" r="147"/></clipPath>
+          <path id="arcTopA2" d="M 38 200 A 162 162 0 0 1 362 200"/>
+          <path id="arcBotA2" d="M 44 200 A 156 156 0 0 0 356 200"/>
+        </defs>
+        <circle cx="200" cy="200" r="192" stroke="var(--lg-ink)" stroke-width="3"/>
+        <circle cx="200" cy="200" r="184" stroke="var(--lg-ink)" stroke-width="1.2"/>
+        <circle cx="200" cy="200" r="150" stroke="var(--lg-ink)" stroke-width="2.5"/>
+        <text font-family="var(--serif)" font-size="34" font-weight="600" letter-spacing="7" fill="var(--lg-ink)">
+          <textPath href="#arcTopA2" startOffset="50%" text-anchor="middle">HEADWATERS</textPath>
+        </text>
+        <text font-family="var(--sans)" font-size="19" font-weight="800" letter-spacing="5" fill="var(--lg-accent)">
+          <textPath href="#arcBotA2" startOffset="50%" text-anchor="middle">HEALTH &amp; FITNESS</textPath>
+        </text>
+        <path d="M 26 200 l 7 -7 7 7 -7 7 Z" fill="var(--lg-accent)"/>
+        <path d="M 360 200 l 7 -7 7 7 -7 7 Z" fill="var(--lg-accent)"/>
+        <g clip-path="url(#sceneClipA2)">
+          <circle cx="200" cy="138" r="26" fill="var(--lg-accent)"/>
+          <g stroke="var(--lg-accent)" stroke-width="3" stroke-linecap="round">
+            <line x1="200" y1="96" x2="200" y2="82"/>
+            <line x1="245" y1="115" x2="256" y2="105"/>
+            <line x1="155" y1="115" x2="144" y2="105"/>
+            <line x1="262" y1="152" x2="277" y2="149"/>
+            <line x1="138" y1="152" x2="123" y2="149"/>
+          </g>
+          <path d="M 40 232 L 106 168 L 146 206 L 204 146 L 258 202 L 302 170 L 360 232 Z" fill="var(--lg-ink)" opacity=".38"/>
+          <path d="M 30 252 L 112 196 L 160 238 L 226 178 L 288 240 L 340 210 L 372 252 Z" fill="var(--lg-ink)"/>
+          <g fill="var(--lg-ink)">
+            <path d="M 84 250 l 13 -22 13 22 h -8 l 9 15 h -28 l 9 -15 Z"/>
+            <path d="M 296 252 l 11 -19 11 19 h -7 l 8 13 h -24 l 8 -13 Z"/>
+          </g>
+          <text x="200" y="299" text-anchor="middle" font-family="var(--serif)" font-size="42" font-weight="550" letter-spacing="3" fill="var(--lg-ink)">HHF</text>
+          <text x="200" y="318" text-anchor="middle" font-family="var(--sans)" font-size="11.5" font-weight="700" letter-spacing="3.4" fill="var(--lg-accent)">BUTTE COUNTY · CA</text>
+          <g stroke="var(--lg-ink)" stroke-width="1.4" opacity=".5">
+            <path d="M 62 334 q 34 -8 69 0 t 69 0 69 0"/>
+            <path d="M 84 344 q 29 -7 58 0 t 58 0 58 0"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ================= VARIANT B — TOPO MONOGRAM ================= -->
+  <h2>B — The Topo Monogram</h2>
+  <p class="note">Minimal: HHF set in the brand serif with a clay ridgeline running through, ringed by topo contours. The modern mark — favicon, app icon, embroidery.</p>
+  <div class="row">
+    <div class="card light">
+      <svg width="300" height="300" viewBox="0 0 400 400" fill="none" aria-label="HHF topo monogram">
+        <g stroke="var(--lg-soft)" stroke-width="1.6">
+          <circle cx="200" cy="192" r="170"/>
+          <circle cx="200" cy="192" r="142"/>
+          <circle cx="200" cy="192" r="114"/>
+        </g>
+        <text x="200" y="226" text-anchor="middle" font-family="var(--serif)" font-size="128" font-weight="500" letter-spacing="4" fill="var(--lg-ink)">HHF</text>
+        <path d="M 52 246 L 118 214 L 152 236 L 208 202 L 262 234 L 306 214 L 348 246"
+              stroke="var(--lg-accent)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+        <text x="200" y="306" text-anchor="middle" font-family="var(--sans)" font-size="15" font-weight="700" letter-spacing="4.5" fill="var(--lg-ink)">HEADWATERS</text>
+        <text x="200" y="328" text-anchor="middle" font-family="var(--sans)" font-size="12" font-weight="700" letter-spacing="3.6" fill="var(--lg-accent)">HEALTH &amp; FITNESS</text>
+      </svg>
+    </div>
+    <div class="card dark">
+      <svg width="300" height="300" viewBox="0 0 400 400" fill="none" aria-label="HHF topo monogram dark">
+        <g stroke="var(--lg-soft)" stroke-width="1.6">
+          <circle cx="200" cy="192" r="170"/>
+          <circle cx="200" cy="192" r="142"/>
+          <circle cx="200" cy="192" r="114"/>
+        </g>
+        <text x="200" y="226" text-anchor="middle" font-family="var(--serif)" font-size="128" font-weight="500" letter-spacing="4" fill="var(--lg-ink)">HHF</text>
+        <path d="M 52 246 L 118 214 L 152 236 L 208 202 L 262 234 L 306 214 L 348 246"
+              stroke="var(--lg-accent)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+        <text x="200" y="306" text-anchor="middle" font-family="var(--sans)" font-size="15" font-weight="700" letter-spacing="4.5" fill="var(--lg-ink)">HEADWATERS</text>
+        <text x="200" y="328" text-anchor="middle" font-family="var(--sans)" font-size="12" font-weight="700" letter-spacing="3.6" fill="var(--lg-accent)">HEALTH &amp; FITNESS</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ================= VARIANT C — TRAIL SIGN LOCKUP ================= -->
+  <h2>C — The Trail-Sign Lockup</h2>
+  <p class="note">Horizontal wordmark with a compact sun-over-ridge icon — the everyday workhorse for the website header, flyer masthead, email signature, business card.</p>
+  <div class="row">
+    <div class="card light" style="min-height:240px">
+      <svg width="480" height="150" viewBox="0 0 640 200" fill="none" aria-label="Headwaters Health and Fitness lockup">
+        <!-- icon -->
+        <g>
+          <circle cx="90" cy="100" r="74" stroke="var(--lg-ink)" stroke-width="3"/>
+          <circle cx="90" cy="100" r="65" stroke="var(--lg-ink)" stroke-width="1"/>
+          <g clip-path="url(#iconClipC1)">
+            <circle cx="90" cy="76" r="17" fill="var(--lg-accent)"/>
+            <path d="M 22 122 L 58 88 L 80 108 L 112 76 L 140 106 L 158 122 Z" fill="var(--lg-ink)" opacity=".38"/>
+            <path d="M 16 138 L 60 106 L 86 128 L 122 96 L 152 126 L 168 138 Z" fill="var(--lg-ink)"/>
+            <path d="M 40 152 q 18 -5 37 0 t 37 0 37 0" stroke="var(--lg-ink)" stroke-width="1.4" fill="none" opacity=".55"/>
+          </g>
+          <defs><clipPath id="iconClipC1"><circle cx="90" cy="100" r="63"/></clipPath></defs>
+        </g>
+        <!-- wordmark -->
+        <text x="196" y="92" font-family="var(--serif)" font-size="58" font-weight="550" letter-spacing="0" fill="var(--lg-ink)">Headwaters</text>
+        <line x1="199" y1="112" x2="576" y2="112" stroke="var(--lg-accent)" stroke-width="2.5"/>
+        <text x="199" y="140" font-family="var(--sans)" font-size="20.5" font-weight="800" letter-spacing="7.4" fill="var(--lg-accent)">HEALTH &amp; FITNESS</text>
+        <text x="199" y="165" font-family="var(--sans)" font-size="12.5" font-weight="600" letter-spacing="3.4" fill="var(--lg-ink)" opacity=".62">BUTTE COUNTY · CALIFORNIA</text>
+      </svg>
+    </div>
+    <div class="card dark" style="min-height:240px">
+      <svg width="480" height="150" viewBox="0 0 640 200" fill="none" aria-label="Headwaters Health and Fitness lockup dark">
+        <g>
+          <circle cx="90" cy="100" r="74" stroke="var(--lg-ink)" stroke-width="3"/>
+          <circle cx="90" cy="100" r="65" stroke="var(--lg-ink)" stroke-width="1"/>
+          <g clip-path="url(#iconClipC2)">
+            <circle cx="90" cy="76" r="17" fill="var(--lg-accent)"/>
+            <path d="M 22 122 L 58 88 L 80 108 L 112 76 L 140 106 L 158 122 Z" fill="var(--lg-ink)" opacity=".38"/>
+            <path d="M 16 138 L 60 106 L 86 128 L 122 96 L 152 126 L 168 138 Z" fill="var(--lg-ink)"/>
+            <path d="M 40 152 q 18 -5 37 0 t 37 0 37 0" stroke="var(--lg-ink)" stroke-width="1.4" fill="none" opacity=".55"/>
+          </g>
+          <defs><clipPath id="iconClipC2"><circle cx="90" cy="100" r="63"/></clipPath></defs>
+        </g>
+        <text x="196" y="92" font-family="var(--serif)" font-size="58" font-weight="550" letter-spacing="0" fill="var(--lg-ink)">Headwaters</text>
+        <line x1="199" y1="112" x2="576" y2="112" stroke="var(--lg-accent)" stroke-width="2.5"/>
+        <text x="199" y="140" font-family="var(--sans)" font-size="20.5" font-weight="800" letter-spacing="7.4" fill="var(--lg-accent)">HEALTH &amp; FITNESS</text>
+        <text x="199" y="165" font-family="var(--sans)" font-size="12.5" font-weight="600" letter-spacing="3.4" fill="var(--lg-ink)" opacity=".62">BUTTE COUNTY · CALIFORNIA</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ================= SMALL SIZE TEST ================= -->
+  <h2>Scalability check</h2>
+  <p class="note">A logo has to survive small. Badge and monogram at avatar/favicon-ish sizes:</p>
+  <div class="small-row light">
+    <svg width="96" height="96" viewBox="0 0 400 400" fill="none"><use href="#unused"/>
+      <circle cx="200" cy="200" r="192" stroke="var(--lg-ink)" stroke-width="6"/>
+      <circle cx="200" cy="138" r="30" fill="var(--lg-accent)"/>
+      <path d="M 30 252 L 112 196 L 160 238 L 226 178 L 288 240 L 340 210 L 372 252 L 372 400 L 30 400 Z" fill="var(--lg-ink)"/>
+      <text x="200" y="330" text-anchor="middle" font-family="var(--serif)" font-size="86" font-weight="550" fill="var(--paper)" letter-spacing="2">HHF</text>
+    </svg>
+    <span>96px simplified badge</span>
+    <svg width="64" height="64" viewBox="0 0 400 400" fill="none">
+      <circle cx="200" cy="192" r="170" stroke="var(--lg-soft)" stroke-width="3"/>
+      <text x="200" y="240" text-anchor="middle" font-family="var(--serif)" font-size="150" font-weight="500" fill="var(--lg-ink)">H</text>
+      <path d="M 90 268 L 150 236 L 200 262 L 258 228 L 312 268" stroke="var(--lg-accent)" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span>64px favicon (single H)</span>
+    <svg width="240" height="52" viewBox="0 0 640 140" fill="none">
+      <text x="8" y="66" font-family="var(--serif)" font-size="58" font-weight="550" fill="var(--lg-ink)">Headwaters</text>
+      <text x="11" y="106" font-family="var(--sans)" font-size="20.5" font-weight="800" letter-spacing="7.4" fill="var(--lg-accent)">HEALTH &amp; FITNESS</text>
+    </svg>
+    <span>Nav-bar lockup, no icon</span>
+  </div>
+</div>
+</body>
+</html>
