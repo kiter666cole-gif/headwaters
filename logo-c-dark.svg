@@ -11,7 +11,7 @@
       <circle cx="90" cy="76" r="17" fill="#E8965F"/>
       <path d="M 22 122 L 58 88 L 80 108 L 112 76 L 140 106 L 158 122 Z" fill="#F5F0E6" opacity=".38"/>
       <path d="M 16 138 L 60 106 L 86 128 L 122 96 L 152 126 L 168 138 Z" fill="#F5F0E6"/>
-      <path d="M 40 152 q 18 -5 37 0 t 37 0 37 0" stroke="#F5F0E6" stroke-width="1.4" fill="none" opacity=".55"/>
+      <path d="M 40 152 q 18 -5 37 0 t 37 0 37 0" stroke="#8A9B7E" stroke-width="2.4" fill="none" opacity=".9"/>
     </g>
   </g>
   <text x="196" y="92" font-family="Fraunces, Georgia, serif" font-size="54" font-weight="550" fill="#F5F0E6">Headwaters</text>
